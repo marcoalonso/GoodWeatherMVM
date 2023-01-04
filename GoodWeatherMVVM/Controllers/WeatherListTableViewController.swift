@@ -13,6 +13,17 @@ class WeatherListTableViewController: UITableViewController {
         super.viewDidLoad()
 
         setupUI()
+        /*
+        let resource = Resource(url: URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=698cb29c0a1e70d1a30a0a9982f6a95a&units=metric&lang=es&q=morelia")!) { data in
+            return try? JSONDecoder().decode(WeatherRrsponse.self, from: data)
+        }
+        
+        Webservice().load(resource: resource) { weatherResponse in
+            if let weatherResponse = weatherResponse {
+                print(weatherResponse)
+            }
+        }
+         */
         
     }
     
