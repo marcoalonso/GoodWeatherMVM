@@ -8,7 +8,7 @@
 import Foundation
 
 class AddWeatherViewModel {
-    func addWeather(for city: String, @escaping (WeatherViewModel) -> Void) {
+    func addWeather(for city: String, completion: @escaping (WeatherViewModel) -> Void) {
         
         let weatherURL = Constants.Urls.urlForWeatherByCity(city: city)
         

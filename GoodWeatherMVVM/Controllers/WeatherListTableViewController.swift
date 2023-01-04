@@ -7,26 +7,19 @@
 
 import UIKit
 
-class WeatherListTableViewController: UITableViewController {
-
+class WeatherListTableViewController: UITableViewController, AddWeatherDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupUI()
-        /*
-        let resource = Resource(url: URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=698cb29c0a1e70d1a30a0a9982f6a95a&units=metric&lang=es&q=morelia")!) { data in
-            return try? JSONDecoder().decode(WeatherRrsponse.self, from: data)
-        }
         
-        Webservice().load(resource: resource) { weatherResponse in
-            if let weatherResponse = weatherResponse {
-                print(weatherResponse)
-            }
-        }
-         */
+        setupUI()
         
     }
     
+    func addWeatherDidSave(vm: WeatherViewModel) {
+        print(vm)
+        
+    }
     
     func setupUI(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -60,5 +53,23 @@ class WeatherListTableViewController: UITableViewController {
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddWeatherCityViewController" {
+            prepareSegueForAddWeatherCityViewController(segue: segue)
+        }
+    }
+    
+    //unwind segue
+    func prepareSegueForAddWeatherCityViewController(segue: UIStoryboardSegue) {
+        //get the navController and extract th VC
+        guard let nav = segue.destination as? UINavigationController else { fatalError("Navigation controller not found")
+        }
+        
+        guard let addWeatherCityVC = nav.viewControllers.first as? AddWeatherCityViewController else {
+            fatalError("AddWeatherCityViewController not found")
+        }
+        
+        addWeatherCityVC.delegate = self
+    }
 
 }

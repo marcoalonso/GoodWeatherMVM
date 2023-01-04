@@ -57,7 +57,7 @@
                         <barButtonItem key="leftBarButtonItem" title="settings" id="KVj-mK-3Ym"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="RUF-Ft-O8c">
                             <connections>
-                                <segue destination="2j4-Ms-HoB" kind="presentation" modalPresentationStyle="fullScreen" id="esZ-yB-gbw"/>
+                                <segue destination="2j4-Ms-HoB" kind="presentation" identifier="AddWeatherCityViewController" modalPresentationStyle="fullScreen" id="esZ-yB-gbw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -168,7 +168,7 @@
         <image name="cloud" catalog="system" width="128" height="87"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
