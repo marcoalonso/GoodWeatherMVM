@@ -9,6 +9,7 @@ import UIKit
 
 class AddWeatherCityViewController: UIViewController {
 
+    @IBOutlet weak var cityNameTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,5 +25,12 @@ class AddWeatherCityViewController: UIViewController {
         nav?.tintColor = .white
     }
     
-
+    @IBAction func saveCityButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
 }

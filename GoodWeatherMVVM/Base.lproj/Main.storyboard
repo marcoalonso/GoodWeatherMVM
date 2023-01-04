@@ -73,10 +73,55 @@
                     <view key="view" contentMode="scaleToFill" id="RGm-Et-aEt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBP-GL-SMB">
+                                <rect key="frame" x="20" y="123" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3pd-eM-pb4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWs-zK-l80">
+                                <rect key="frame" x="136.66666666666666" y="193" width="119.99999999999997" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="e3Q-Yw-HyQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="pTQ-RD-gIH"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveCityButton:" destination="sKO-oP-NNx" eventType="touchUpInside" id="AcP-iH-uEQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="v8A-tI-eIH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8A-tI-eIH" firstAttribute="trailing" secondItem="dBP-GL-SMB" secondAttribute="trailing" constant="20" id="IjN-zp-1Y6"/>
+                            <constraint firstItem="dWs-zK-l80" firstAttribute="top" secondItem="dBP-GL-SMB" secondAttribute="bottom" constant="20" id="WLS-vw-U17"/>
+                            <constraint firstItem="dWs-zK-l80" firstAttribute="centerX" secondItem="RGm-Et-aEt" secondAttribute="centerX" id="frS-dr-bAo"/>
+                            <constraint firstItem="dBP-GL-SMB" firstAttribute="leading" secondItem="v8A-tI-eIH" secondAttribute="leading" constant="20" id="rWz-q0-gz0"/>
+                            <constraint firstItem="dBP-GL-SMB" firstAttribute="top" secondItem="v8A-tI-eIH" secondAttribute="top" constant="20" id="sWN-6E-epx"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add City" id="wGb-qd-DLl"/>
+                    <navigationItem key="navigationItem" title="Add City" id="wGb-qd-DLl">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="KHM-wn-Hh0">
+                            <connections>
+                                <action selector="close:" destination="sKO-oP-NNx" id="gtk-Ui-KdD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextfield" destination="dBP-GL-SMB" id="9Z2-ra-TSE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x62-Li-a77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
