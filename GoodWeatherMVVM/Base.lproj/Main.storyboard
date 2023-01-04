@@ -12,7 +12,7 @@
         <!--GoodWeather -->
         <scene sceneID="eA8-IJ-0Od">
             <objects>
-                <tableViewController id="Z7S-1L-sjX" sceneMemberID="viewController">
+                <tableViewController id="Z7S-1L-sjX" customClass="WeatherListTableViewController" customModule="GoodWeatherMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Sfb-pv-1mY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GoodWeather " id="WtB-To-574">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="smoke.circle.fill" catalog="system" id="KVj-mK-3Ym"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="command.circle" catalog="system" id="KVj-mK-3Ym"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="RUF-Ft-O8c">
                             <connections>
                                 <segue destination="2j4-Ms-HoB" kind="presentation" modalPresentationStyle="fullScreen" id="esZ-yB-gbw"/>
@@ -48,7 +48,7 @@
         <!--Add City-->
         <scene sceneID="Kue-uk-qSu">
             <objects>
-                <viewController id="sKO-oP-NNx" sceneMemberID="viewController">
+                <viewController id="sKO-oP-NNx" customClass="AddWeatherCityViewController" customModule="GoodWeatherMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RGm-Et-aEt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,8 +99,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="command.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="smoke.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
