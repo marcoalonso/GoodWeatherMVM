@@ -100,7 +100,7 @@
                     <navigationItem key="navigationItem" title="GoodWeather " id="WtB-To-574">
                         <barButtonItem key="leftBarButtonItem" title="settings" id="KVj-mK-3Ym">
                             <connections>
-                                <segue destination="tl6-5V-7mB" kind="presentation" modalPresentationStyle="fullScreen" id="xna-1U-qTM"/>
+                                <segue destination="tl6-5V-7mB" kind="presentation" identifier="SettingsTableViewController" modalPresentationStyle="fullScreen" id="xna-1U-qTM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="RUF-Ft-O8c">
