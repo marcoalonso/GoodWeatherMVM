@@ -10,6 +10,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="Vbm-s4-emy">
+            <objects>
+                <viewController id="LhP-Vv-lsR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ep4-lI-I1F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hWr-6G-NJq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qup-ls-ufT">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ZJG-mM-5mj">
+                            <connections>
+                                <action selector="doneButton:" destination="LhP-Vv-lsR" id="jw2-xB-P8r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mK9-Qg-ckS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938.1679389312976" y="-709.15492957746483"/>
+        </scene>
         <!--GoodWeather -->
         <scene sceneID="eA8-IJ-0Od">
             <objects>
@@ -54,7 +76,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GoodWeather " id="WtB-To-574">
-                        <barButtonItem key="leftBarButtonItem" title="settings" id="KVj-mK-3Ym"/>
+                        <barButtonItem key="leftBarButtonItem" title="settings" id="KVj-mK-3Ym">
+                            <connections>
+                                <segue destination="5yO-vm-EET" kind="presentation" modalPresentationStyle="fullScreen" id="y1k-mi-W6p"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="RUF-Ft-O8c">
                             <connections>
                                 <segue destination="2j4-Ms-HoB" kind="presentation" identifier="AddWeatherCityViewController" modalPresentationStyle="fullScreen" id="esZ-yB-gbw"/>
@@ -125,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x62-Li-a77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2718.320610687023" y="-73.239436619718319"/>
+            <point key="canvasLocation" x="3645.0381679389311" y="-73.239436619718319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Iiq-Bn-M30">
@@ -161,7 +187,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CxU-yD-JRs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791.6030534351144" y="-73.239436619718319"/>
+            <point key="canvasLocation" x="2718.320610687023" y="-73.239436619718319"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="44Z-xf-AKV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5yO-vm-EET" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zFf-Mu-xf3">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LhP-Vv-lsR" kind="relationship" relationship="rootViewController" id="dvI-CZ-xmf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37z-Eu-gW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011.4503816793892" y="-709.15492957746483"/>
         </scene>
     </scenes>
     <resources>
