@@ -10,27 +10,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="Vbm-s4-emy">
+        <!--Settings Table View Controller-->
+        <scene sceneID="GMa-Kj-BeM">
             <objects>
-                <viewController id="LhP-Vv-lsR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ep4-lI-I1F">
+                <tableViewController id="BPN-V3-qLL" customClass="SettingsTableViewController" customModule="GoodWeatherMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="a4E-cx-AoQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="hWr-6G-NJq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="qup-ls-ufT">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="ZJG-mM-5mj">
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" textLabel="TEt-c8-NVp" style="IBUITableViewCellStyleDefault" id="GkT-bA-b3L">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GkT-bA-b3L" id="QIa-ch-VBA">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TEt-c8-NVp">
+                                            <rect key="frame" x="20" y="0.0" width="353" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <color key="textColor" name="AccentColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BPN-V3-qLL" id="rTB-9a-BPw"/>
+                            <outlet property="delegate" destination="BPN-V3-qLL" id="CN7-jP-fUJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ffk-N4-evg">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ydy-0U-jrY">
                             <connections>
-                                <action selector="doneButton:" destination="LhP-Vv-lsR" id="jw2-xB-P8r"/>
+                                <action selector="doneButton:" destination="BPN-V3-qLL" id="ypb-D4-B6Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mK9-Qg-ckS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piA-05-8lb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938.1679389312976" y="-709.15492957746483"/>
+            <point key="canvasLocation" x="2576.3358778625952" y="-761.26760563380287"/>
         </scene>
         <!--GoodWeather -->
         <scene sceneID="eA8-IJ-0Od">
@@ -78,7 +100,7 @@
                     <navigationItem key="navigationItem" title="GoodWeather " id="WtB-To-574">
                         <barButtonItem key="leftBarButtonItem" title="settings" id="KVj-mK-3Ym">
                             <connections>
-                                <segue destination="5yO-vm-EET" kind="presentation" modalPresentationStyle="fullScreen" id="y1k-mi-W6p"/>
+                                <segue destination="tl6-5V-7mB" kind="presentation" modalPresentationStyle="fullScreen" id="xna-1U-qTM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="RUF-Ft-O8c">
@@ -190,22 +212,22 @@
             <point key="canvasLocation" x="2718.320610687023" y="-73.239436619718319"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="44Z-xf-AKV">
+        <scene sceneID="RRA-IN-o18">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5yO-vm-EET" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tl6-5V-7mB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zFf-Mu-xf3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vh2-7d-m6d">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="LhP-Vv-lsR" kind="relationship" relationship="rootViewController" id="dvI-CZ-xmf"/>
+                        <segue destination="BPN-V3-qLL" kind="relationship" relationship="rootViewController" id="Ut8-ye-4ai"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="37z-Eu-gW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gx-yU-VtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011.4503816793892" y="-709.15492957746483"/>
+            <point key="canvasLocation" x="1649.6183206106869" y="-761.26760563380287"/>
         </scene>
     </scenes>
     <resources>
