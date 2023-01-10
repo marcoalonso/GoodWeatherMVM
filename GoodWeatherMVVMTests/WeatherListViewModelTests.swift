@@ -1,13 +1,23 @@
 //
-//  GoodWeatherMVVMTests.swift
+//  WeatherListViewModelTests.swift
 //  GoodWeatherMVVMTests
 //
 //  Created by Marco Alonso Rodriguez on 10/01/23.
 //
 
 import XCTest
+@testable import GoodWeatherMVVM
 
-final class GoodWeatherMVVMTests: XCTestCase {
+final class WeatherListViewModelTests: XCTestCase {
+    
+    private var weatherListVM: WeatherListViewModel!
+    
+    override  func setUp() {
+        super.setUp()
+        
+        self.weatherListVM = WeatherListViewModel()
+        
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,7 +37,7 @@ final class GoodWeatherMVVMTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
